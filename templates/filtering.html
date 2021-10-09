@@ -1,0 +1,30 @@
+{% block title %} Форма для фильтрации данных {% endblock %}
+
+{% block body%}
+<form action="/filtering_bd" method="post">
+    <select name="column_selection">
+        <option selected="selected">Выберите колонку для фильтрации</option>
+        <option>id</option>
+        <option>name</option>
+        <option>quantity</option>
+        <option>distance</option>
+    </select>
+    <select name="condition">
+        <option selected="selected">Выберите условие</option>
+        <option> = </option>
+        <option> like </option>
+        <option> > </option>
+        <option> < </option>
+    </select>
+
+    <script>
+    </script>
+
+    <p>
+        <input type="text" name="filtering_value" placeholder="Поле для ввода значения для фильтрации" size="35" required pattern="[^\s]" />
+    </p>
+    <p>
+        <button type="submit">Отправить</button>
+    </p>
+</form>
+{% endblock %}

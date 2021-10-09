@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %} Вывод базы данных {% endblock %}
+
+{% block body%}
+    {%for i in result%}
+        {{i.id}}<br>
+        {{i.date}}<br>
+        {{i.name}}<br>
+        {{i.quantity}}<br>
+        {{i.distance}}<br>
+    {% endfor %}
+{% endblock %}
+
